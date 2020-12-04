@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (pause.innerText === 'pause') {
             pause.innerText = 'resume';
-            clearInterval(myInterval);
+            clearInterval(interval);
 
             minus.disabled = true;
             plus.disabled = true;
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         else  {
-            myInterval = window.setInterval( function () {
+            interval = window.setInterval( function () {
                 counter.textContent++;
              }, 1000);
             pause.innerText = 'pause';
