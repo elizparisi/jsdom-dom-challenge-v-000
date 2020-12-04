@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let counter = document.getElementById("counter");
   counter.textContent = 0;
   
-  myInterval = window.setInterval( function () {
+  interval = window.setInterval( function () {
     counter.textContent++;
     likes.textContent = 0;
   }, 1000);
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let heart = document.getElementById("heart");
     let likes = document.getElementById("likes");
     let pause = document.getElementById("pause");
-    let submit = document.getElementById("submit")
-    let list = document.getElementById("list")
+    let submit = document.getElementById("submit");
+    let list = document.getElementById("list");
 
     minus.addEventListener('click', function () {
         counter.textContent--;
@@ -41,13 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
     heart.addEventListener('click', function () {
         let number = counter.textContent;
         if (likesCounter[number]) {
-            likes.textContent = likesCounter[number]++
+            likes.textContent = likesCounter[number]++;
         }
         else  {
         likesCounter[number] = 1;
         likes.textContent++;
         }
-        debugger
     });
 
     pause.addEventListener('click', function () {
